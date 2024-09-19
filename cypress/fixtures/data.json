@@ -1,0 +1,80 @@
+{
+  "developerA": {
+    "name": "KomainuBushido",
+    "position": "Front End Developer",
+    "location": "Japan",
+    "rate": 44,
+    "keyTechnologies": ["Android", "ReactNative"],
+    "status": "Bench"
+
+  },
+  "manager1": {
+    "firstName": "Manager",
+    "email": "polly53@ethereal.email",
+    "password": "11111111",
+    "lastName": "One",
+    "position": "Manager",
+    "birth": "2002-02-01",
+    "manager1EmailCredentials": {
+      "email": "polly53@ethereal.email",
+      "password": "RwhJ1FHBwrWJJ2NDJz"
+    }
+  },
+  "adminUser": {
+    "firstName": "Test",
+    "email": "myrtice.lynch@ethereal.email",
+    "password": "11111111",
+    "lastName": "Admin",
+    "adminUserEMailCredentials": {
+      "email": "myrtice.lynch@ethereal.email",
+      "password": "G7uDVAU3A2ESBwts8D"
+    }
+  },
+  "signUpUser": {
+    "firstname": "Test",
+    "email": "rubie.morar75@ethereal.email",
+    "password": "11111111",
+    "lastName": "Admin",
+    "signUpUserEMailCredentials": {
+      "email": "rubie.morar75@ethereal.email",
+      "password": "XqtKgpQQ37Sn99UR1z"
+    }
+  },
+  "createCompany": {
+    "admin": {
+      "Firstname": "Test",
+      "Email": "rubie.morar75@ethereal.email",
+      "Password": "11111111",
+      "Lastname": "Admin",
+      "Position": "Test Cypress",
+      "Birth": "2002-02-20"
+    },
+    "company": {
+      "Company": "Cypress Sign Up Testing",
+      "Technologies": [
+        ".NET",
+        "Javascript",
+        "Android"
+      ],
+      "Industries": [
+        "Healthcare",
+        "Fintech"
+      ],
+      "BillingEmail": "testuseremail666@gmail.com",
+      "Headquarters": "Ukraine",
+      "Website": "testCompanyNumber6.com",
+      "Description": "Company description"
+    }
+  },
+  "nonExistingEmail": "bncvnbcvbhdvds@gmail.com",
+  "invalidEmail1": "hhhhhhhh",
+  "invalidEmail2": "hhhhhhhh@",
+  "nonExistingPassword": "77777777",
+  "validPassword": "87878787",
+  "invalidPass": "123",
+  "firstName": "Me",
+  "successRegistration": "We're so glad that you chose our platform unbench.us",
+  "existingEmail": "genovaelena@googlem.ml",
+  "date": "2023-04-21"
+}
+

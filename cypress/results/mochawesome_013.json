@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-10-19T14:20:09.945Z",
+    "end": "2023-10-19T14:21:38.585Z",
+    "duration": 88640,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7935bf2f-bfea-4320-a822-35d28aa8b5bf",
+      "title": "",
+      "fullFile": "cypress/e2e/0_signUp.cy.ts",
+      "file": "cypress/e2e/0_signUp.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e1139718-9b25-4d3f-9a2f-3014f91a8170",
+          "title": "Sign Up page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifies elements on the first step",
+              "fullTitle": "Sign Up page Verifies elements on the first step",
+              "timedOut": null,
+              "duration": 36175,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(signUp.signUpHeading).should('exist').children(signUp.signUpFormTitle).should('contain.text', 'Sign up')\n    .parent().children(signUp.loginPrompt).should('exist').and('have.text', 'Already a member?Log in');\ncy.get(signUp.logInLink).should('exist');\ncy.get(signUp.firstName).should('exist').and('have.attr', 'type', 'text')\n    .parent().children().contains('First name').should('exist');\ncy.get(signUp.lastName).should('exist').and('have.attr', 'type', 'text')\n    .parent().children().contains('Last name').should('exist');\ncy.get(signUp.email).should('exist').and('have.attr', 'type', 'email')\n    .parent().children().contains('Email').should('exist');\ncy.get(signUp.password).should('exist').and('have.attr', 'type', 'password')\n    .parent().children().contains('Password').should('exist');\ncy.get(signUp.position).should('exist').and('have.attr', 'type', 'text')\n    .parent().children().contains('Position').should('exist');\ncy.get(signUp.birth).should('exist').and('have.attr', 'type', 'date')\n    .parent().children().contains('Date of Birth (optional)').should('exist');\ncy.get(signUp.nextStepButton1).should('exist')\n    .and('have.text', 'Next step (2/3)').and('be.visible');\ncy.get(signUp.logInLink).should(\"be.visible\").and('have.text', 'Log in');\ncy.get(signUp.logo).should('be.visible');\ncy.footerCheck();\ncy.get(signUp.chatIcon).should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#zsiq_agtpic`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#zsiq_agtpic`, but never found it.\n    at Context.eval (webpack://unbench_test_automation_cypress/./cypress/e2e/0_signUp.cy.ts:28:0)",
+                "diff": null
+              },
+              "uuid": "0bfc9d93-70bc-4c40-9aeb-a2c337e74aed",
+              "parentUUID": "e1139718-9b25-4d3f-9a2f-3014f91a8170",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is able to sign up to the platform and verify email",
+              "fullTitle": "Sign Up page A user is able to sign up to the platform and verify email",
+              "timedOut": null,
+              "duration": 52263,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.UserSignUp();\n// Log in to verify that a user is registered\ncy.userLogin(Data.createCompany.admin.email, Data.createCompany.admin.password);\n// Verify email\ncy.emailVerification(Data.adminUser.adminUserEMailCredentials);",
+              "err": {},
+              "uuid": "c7a4b439-bae3-4c64-a319-2f57665adc05",
+              "parentUUID": "e1139718-9b25-4d3f-9a2f-3014f91a8170",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c7a4b439-bae3-4c64-a319-2f57665adc05"
+          ],
+          "failures": [
+            "0bfc9d93-70bc-4c40-9aeb-a2c337e74aed"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 88438,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

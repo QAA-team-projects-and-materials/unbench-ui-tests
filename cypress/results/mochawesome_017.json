@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-10-19T14:24:00.179Z",
+    "end": "2023-10-19T14:24:22.741Z",
+    "duration": 22562,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e1783f33-821b-4b6b-909b-d802f5b3bff1",
+      "title": "",
+      "fullFile": "cypress/e2e/4_addManager.cy.ts",
+      "file": "cypress/e2e/4_addManager.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "840b5f52-9c95-4417-8f55-2fb2fafff2df",
+          "title": "Add manager",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "An admin manager is able to add another manager and added manager is able to verify their email",
+              "fullTitle": "Add manager An admin manager is able to add another manager and added manager is able to verify their email",
+              "timedOut": null,
+              "duration": 22501,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// For some reason the\ncy.getBySel('managers-btn').should('exist').realClick();\ncy.getBySel('manager-item').should('have.length', 1).and('contain.text', adminUser.email);\ncy.getBySel('add-manager-btn').should('exist').realClick();\ncy.getBySel('first-name').type(manager.firstName);\ncy.getBySel('last-name').type(manager.lastName);\ncy.getBySel('email').type(manager.email);\ncy.getBySel('position').type(manager.position);\ncy.getBySel('birth').should('exist').type(manager.birth);\ncy.getBySel('add-new-manager-btn').should('exist').realClick();\n// A manager has been added then the list of managers should have 2 managers\ncy.getBySel('manager-item').should('have.length', 2).and('contain.text', adminUser.email);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: expected 'https://test.kitrum.dev/signin' to equal 'https://test.kitrum.dev/requests'\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Add manager`",
+                "estack": "AssertionError: Timed out retrying after 10000ms: expected 'https://test.kitrum.dev/signin' to equal 'https://test.kitrum.dev/requests'\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Add manager`\n    at Context.eval (webpack://unbench_test_automation_cypress/./cypress/support/e2e.ts:39:0)",
+                "diff": "- '\\'https://test.kitrum.dev/signin\\''\n+ '\\'https://test.kitrum.dev/requests\\''\n"
+              },
+              "uuid": "d1ad0ba7-3e29-4280-b60d-e1382bb8bf05",
+              "parentUUID": "840b5f52-9c95-4417-8f55-2fb2fafff2df",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d1ad0ba7-3e29-4280-b60d-e1382bb8bf05"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 22501,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

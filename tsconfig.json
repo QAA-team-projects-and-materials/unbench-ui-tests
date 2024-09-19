@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "types": ["node", "cypress", "cypress-real-events"],
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

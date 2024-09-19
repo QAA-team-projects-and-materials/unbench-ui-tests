@@ -1,0 +1,20 @@
+{
+  "loginPage": "https://test.kitrum.dev/signin",
+  "signUpPage": "https://test.kitrum.dev/signup",
+  "landingPage": "https://unbench.us/",
+
+  "linkedInLoginPage": "https://www.linkedin.com/",
+  "googleLoginPage": "https://accounts.google.com/",
+
+  "forgotPasswordPage": "https://test.kitrum.dev/forgotPass",
+  "requestsPage": "https://test.kitrum.dev/requests",
+
+  "linkedIn": "https://www.linkedin.com/company/unbench",
+  "facebook": "https://www.facebook.com/Unbench",
+  "instagram": "https://www.instagram.com/unbench.us/",
+  "telegram": "https://t.me/unbench_bot",
+  "contact": "https://unbench.us/contact-us.html",
+  "termsAndConditions": "https://unbench.us/terms-and-conditions.html",
+  "privacyPolicy": "https://unbench.us/privacy-policy.html",
+  "helpDesk": "https://unbench.us/help-desk.html"
+}

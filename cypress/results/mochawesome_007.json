@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-10-18T13:24:06.603Z",
+    "end": "2023-10-18T13:24:20.411Z",
+    "duration": 13808,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2b04ba44-cd74-43fa-a24f-c0718dda1e06",
+      "title": "",
+      "fullFile": "cypress/e2e/forgotPassword.cy.ts",
+      "file": "cypress/e2e/forgotPassword.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bbeff5bb-8c52-486d-93de-fd3f30ebd3a6",
+          "title": "Forgot Password",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A manager is able to reset their password",
+              "fullTitle": "Forgot Password A manager is able to reset their password",
+              "timedOut": null,
+              "duration": 11130,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.subtitle.nav').contains('Forgot password?').realClick();\ncy.url().should('contain', '/forgotPass');\n// Verify elements for Forgot Password page\ncy.get('.h-4.login').should('contain.text', 'Password');\ncy.get('.form-link-text-wrapper.header>.subtitle').should('contain.text', 'Not a member?');\ncy.get(forgotPassword.signupSubtitle).contains('Sign up').should('exist');\ncy.get(forgotPassword.newPasswordTextInfo).should('contain.text', textInfo);\ncy.get(forgotPassword.backButton).should('contain.text', 'Back')\n    .and('be.visible');\ncy.get(forgotPassword.userEmailField).should('exist').and('have.attr', 'type', 'email').type(userEmail);\ncy.get(forgotPassword.resetPasswordButton).contains('reset password').should('exist').realClick();\ncy.get('.form-error').should('not.exist');\n// retry fetching the email\ncy.fetchEmail('getLatestEmailBySubject', 'Reset your password for Unbench.us').its('html')\n    .then(function (html) {\n    cy.document({ log: false }).invoke({ log: false }, 'write', html);\n});\n// Verify Email\n// TODO: Add text verification after the mailing htmls fixed to have test attributes\ncy.contains(userEmail).should('exist');\ncy.get('a[href]').contains('Link').then(function (elem) {\n    var createPasswordUrl = elem.prop('href');\n    expect(createPasswordUrl).to.match(/\\/createNewPassword\\?email=/);\n    cy.visit(createPasswordUrl);\n});\n// Verify Create New Password Page and perform actions\ncy.url().should(function (elem) {\n    expect(elem).to.match(/\\/createNewPassword\\?email=/);\n});\ncy.get(forgotPassword.emailInput).contains('Enter your email address').should('exist')\n    .parent().children('input').should('have.attr', 'type', 'email')\n    .and('have.value', userEmail);\ncy.get(forgotPassword.passwordInput).contains('Enter your new password').should('exist')\n    .parent().children('input').should('have.attr', 'type', 'password')\n    .should('exist').type(\"\".concat(newPassword));\ncy.get(forgotPassword.confirmPasswordInput).contains('Confirm your password').should('exist')\n    .parent().children('input').should('have.attr', 'type', 'password')\n    .should('exist').type(\"\".concat(newPassword));\ncy.get(forgotPassword.submitPaswordButton).contains('Sign In').should('exist').realClick();\n// Redirect to Sign In and see if new password works\ncy.url().should('contain', '/requests');",
+              "err": {
+                "message": "CypressError: `cy.task('getUserEmail')` failed with the following error:\n\n> Cannot read properties of undefined (reading 'email')\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Forgot Password`",
+                "estack": "CypressError: `cy.task('getUserEmail')` failed with the following error:\n\n> Cannot read properties of undefined (reading 'email')\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Forgot Password`\n    at <unknown> (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:134597:70)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://unbench_test_automation_cypress/./cypress/e2e/forgotPassword.cy.ts:12:0)\n\nFrom Node.js Internals:\n  TypeError: Cannot read properties of undefined (reading 'email')\n      at <unknown> (/home/bullid/e2e-platform.unbench.us/cypress.config.ts:11:53)\n      at step (/home/bullid/e2e-platform.unbench.us/cypress.config.ts:33:23)\n      at Object.next (/home/bullid/e2e-platform.unbench.us/cypress.config.ts:14:53)\n      at <unknown> (/home/bullid/e2e-platform.unbench.us/cypress.config.ts:8:71)\n  at new Promise (<anonymous>)\n      at __awaiter (/home/bullid/e2e-platform.unbench.us/cypress.config.ts:4:12)\n      at getUserEmail (/home/bullid/e2e-platform.unbench.us/cypress.config.ts:50:36)\n      at invoke (/home/bullid/.cache/Cypress/12.17.4/Cypress/resources/app/node_modules/@packages/server/lib/plugins/child/run_plugins.js:246:16)\n      at <unknown> (/home/bullid/.cache/Cypress/12.17.4/Cypress/resources/app/node_modules/@packages/server/lib/plugins/util.js:59:14)\n      at tryCatcher (/home/bullid/.cache/Cypress/12.17.4/Cypress/resources/app/node_modules/bluebird/js/release/util.js:16:23)\n      at Function.Promise.attempt.Promise.try (/home/bullid/.cache/Cypress/12.17.4/Cypress/resources/app/node_modules/bluebird/js/release/method.js:39:29)\n      at Object.wrapChildPromise (/home/bullid/.cache/Cypress/12.17.4/Cypress/resources/app/node_modules/@packages/server/lib/plugins/util.js:58:23)\n      at RunPlugins.taskExecute (/home/bullid/.cache/Cypress/12.17.4/Cypress/resources/app/node_modules/@packages/server/lib/plugins/child/run_plugins.js:252:10)\n      at RunPlugins.execute (/home/bullid/.cache/Cypress/12.17.4/Cypress/resources/app/node_modules/@packages/server/lib/plugins/child/run_plugins.js:166:21)\n      at EventEmitter.<anonymous> (/home/bullid/.cache/Cypress/12.17.4/Cypress/resources/app/node_modules/@packages/server/lib/plugins/child/run_plugins.js:56:12)\n      at EventEmitter.emit (node:events:513:28)\n      at EventEmitter.emit (node:domain:489:12)\n      at process.<anonymous> (/home/bullid/.cache/Cypress/12.17.4/Cypress/resources/app/node_modules/@packages/server/lib/plugins/util.js:33:22)\n      at process.emit (node:events:513:28)\n      at process.emit (node:domain:489:12)\n      at process.emit.sharedData.processEmitHook.installedValue [as emit] (/home/bullid/.cache/Cypress/12.17.4/Cypress/resources/app/node_modules/@cspotcode/source-map-support/source-map-support.js:745:40)\n      at emit (node:internal/child_process:937:14)",
+                "diff": null
+              },
+              "uuid": "1017850a-4d63-45c6-9628-43fdc7abc229",
+              "parentUUID": "bbeff5bb-8c52-486d-93de-fd3f30ebd3a6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1017850a-4d63-45c6-9628-43fdc7abc229"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11130,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-10-19T14:23:22.831Z",
+    "end": "2023-10-19T14:23:57.740Z",
+    "duration": 34909,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9f553494-b2ef-46ae-8ebe-2f980e01a702",
+      "title": "",
+      "fullFile": "cypress/e2e/3_loginPage.cy.ts",
+      "file": "cypress/e2e/3_loginPage.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "67156c9a-579a-4cdb-92e5-e2afd83d3b03",
+          "title": "Log in page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifies elements on the page",
+              "fullTitle": "Log in page Verifies elements on the page",
+              "timedOut": null,
+              "duration": 18714,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Heading section\ncy.get(login.loginHeading).should('exist').children(login.logInFormTitle).should('contain.text', 'Log in')\n    .parent().children(login.signUpPrompt).should('exist').and('have.text', 'Not a member?Sign up');\ncy.get(login.signUpLink).should('exist');\n// Login form\ncy.get(login.logInWithGoogle).should('exist').children().should('have.text', 'Login with Google');\ncy.get(login.logInWithLinkedin).should('exist').children().should('have.text', 'Login with LinkedIn');\ncy.get(login.emailField).should('exist').and('have.attr', 'type', 'email')\n    .parent().parent(login.emailBlock).should('exist').and('have.text', 'Email');\ncy.get(login.passwordField).should('exist').and('have.attr', 'type', 'password')\n    .parent().parent(login.passwordBlock).should('exist').and('have.text', 'Password');\n// Form button wrapper\ncy.get(login.forgotPasswordLink).contains('Forgot password?').should('exist');\ncy.get(login.logInButton).should('have.text', 'Login')\n    .and('have.length', 1).and('be.visible');\ncy.get(login.logo).should('be.visible');\ncy.footerCheck();\ncy.get(login.chatIcon).should('be.visible');",
+              "err": {},
+              "uuid": "f3dceba8-c264-481d-830b-7b2a8a80707d",
+              "parentUUID": "67156c9a-579a-4cdb-92e5-e2afd83d3b03",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is able to log in to the platform with existing user data",
+              "fullTitle": "Log in page A user is able to log in to the platform with existing user data",
+              "timedOut": null,
+              "duration": 16124,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Login form\ncy.userLogin(Data.adminUser.email, Data.adminUser.password);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: expected 'https://test.kitrum.dev/signin' to equal 'https://test.kitrum.dev/requests'",
+                "estack": "AssertionError: Timed out retrying after 10000ms: expected 'https://test.kitrum.dev/signin' to equal 'https://test.kitrum.dev/requests'\n    at Context.eval (webpack://unbench_test_automation_cypress/./cypress/support/e2e.ts:39:0)",
+                "diff": "- 'https://test.kitrum.dev/signin'\n+ 'https://test.kitrum.dev/requests'\n"
+              },
+              "uuid": "3863223b-6c03-462e-bfdb-7fd919ad8d6b",
+              "parentUUID": "67156c9a-579a-4cdb-92e5-e2afd83d3b03",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f3dceba8-c264-481d-830b-7b2a8a80707d"
+          ],
+          "failures": [
+            "3863223b-6c03-462e-bfdb-7fd919ad8d6b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 34838,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

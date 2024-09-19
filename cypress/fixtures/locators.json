@@ -1,0 +1,115 @@
+{
+  "emailVerification": {
+    "emailVerificationModalAfterLogin": "div.ReactModal__Content.ReactModal__Content--after-open",
+    "emailVerifiedMessage": "div.d-flex.align-items-center.mt-4"
+  },
+  "forgotPassword": {
+    "signupSubtitle": "a>.subtitle.nav",
+    "newPasswordTextInfo": ".password-info-wrapper.op-60>p",
+    "backButton": ".btn-text-wrapper.btn-back",
+    "userEmailField": "input[name='Email']",
+    "resetPasswordButton": ".btn-text-wrapper>.subtitle.white-text",
+    "emailInput": "div .placeholder.form",
+    "passwordInput": "div .placeholder.form",
+    "confirmPasswordInput": "div .placeholder.form",
+    "submitPaswordButton": "button[type='submit']"
+  },
+  "footer": {
+    "footerBlock": ".section.footer",
+    "footerLogo": ".footer-logo",
+    "firstColumnLinks": ".link-wrapper.first",
+    "linkedInLink": "a:nth-child(2)",
+    "facebookLink": "a:nth-child(3)",
+    "instagramLink": "a:nth-child(4)",
+    "telegramLink": "a:nth-child(5)",
+    "secondColumnLinks": ".link-wrapper.second",
+    "contactLink": "a:nth-child(2)",
+    "termsAndConditions": "a:nth-child(3)",
+    "privacyPolicy": "a:nth-child(4)",
+    "helpdesk": "a:nth-child(5)"
+  },
+  "loginPage": {
+    "loginHeading": "login-heading",
+    "logo": ".main-logo",
+    "logInFormTitle": "login-title",
+    "signUpPrompt": ".form-link-text-wrapper.header",
+    "signUpLink": "a[href='/signup']",
+    "emailField": "input[name='Email']",
+    "passwordField": "input[name='Password']",
+    "logInWithGoogle": "login-with-google",
+    "logInWithLinkedin": "login-with-linkedin",
+    "emailBlock": "email-block",
+    "passwordBlock": "password-block",
+    "logInButton": "login-btn",
+    "forgotPasswordLink": "forgot-pass",
+    "chatIcon": "#zsiq_agtpic",
+    "chatModal": ".zls-sptwndw"
+  },
+  "signUpPage": {
+    "signUpHeading": ".heading-section-wrapper.login",
+    "loginPrompt": ".form-link-text-wrapper.header",
+    "logo": ".main-logo",
+    "firstName": "firstname",
+    "lastName": "lastname",
+    "email": "email",
+    "password": "password",
+    "position": "position",
+    "signUpFormTitle": ".h-4.login",
+    "logInLink": "a[href='/signin']",
+    "nextStepButton1": ".btn-text-wrapper",
+    "birth": "birth",
+    "companyName": "company",
+    "website": "website",
+    "billingEmail": "billing-email",
+    "countryOfRegistration": ".css-2b097c-container",
+    "optionSelect": "[id*='react-select-2-option']",
+    "showMoreBtn": ".btn-show-more",
+    "keyTechnologiesBlock": "key-technologies-block",
+    "keyTechnologies": "key-technologies-list",
+    "keyTechnologyItem": "key-technology-item",
+    "industriesBlock": "key-technologies-block",
+    "industries":"industries-list",
+    "industryItem": "industries-item",
+    "backButton": ".btn.back",
+    "nextStepButton2": ".btn-text-wrapper",
+    "createAccountBtn": ".btn-text-wrapper",
+    "chatIcon": "#zsiq_agtpic",
+    "chatModal": ".zls-sptwndw",
+    "description": "Description"
+  },
+  "addManager": {
+    "managersBtn": "managers-btn",
+    "managerItem": "manager-item",
+    "addManagerBtn": "add-manager-btn",
+    "firstname": "first-name",
+    "lastname": "last-name",
+    "email": "email",
+    "position": "position",
+    "birth": "birth",
+    "addNewManagerBtn": "add-new-manager-btn",
+    "deleteManagerItem": "delete-manager-item",
+    "removeBtn": "[type=submit]"
+  },
+  "addDeveloper": {
+    "addDeveloperBtn": "add-developer-btn",
+    "developersName": "developer-name",
+    "position": "developer-position",
+    "locationDropDown": "developer-location-dropdown",
+    "locationContainer": ".css-2b097c-container",
+    "locationsOption": ".css-rb0t0j-option",
+    "developerRate": "developer-rate",
+    "keyTechnologies": "developer-technologies-dropdown",
+    "technologiesContainer": ".basic-multi-select.css-2b097c-container",
+    "technologyOption": ".select__option.css-1ij1rq9-option",
+    "uploadFile": ".filepond--drop-label",
+    "addBtn": "add-btn",
+    "developerItem": "developer-item",
+    "deleteDeveloperBtn": "delete-developer",
+    "removeBtn": "button[type=\"submit\"]"
+
+
+
+
+
+  }
+}

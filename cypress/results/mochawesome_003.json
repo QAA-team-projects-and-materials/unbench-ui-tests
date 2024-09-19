@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-11T08:54:59.500Z",
+    "end": "2023-09-11T08:55:17.723Z",
+    "duration": 18223,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2cc1e157-6c74-4d5f-bf93-50515024b21d",
+      "title": "",
+      "fullFile": "cypress/e2e/login_page.cy.ts",
+      "file": "cypress/e2e/login_page.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "93ab9916-ebd5-4dc2-9f1d-5b396a6876da",
+          "title": "Log in page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifies elements on the first step",
+              "fullTitle": "Log in page Verifies elements on the first step",
+              "timedOut": null,
+              "duration": 13563,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Heading section\ncy.get('.heading-section-wrapper.login').should('exist').children('.h-4.login').should('contain.text', 'Log in')\n    .parent().children(\".form-link-text-wrapper.header\").should('exist').and('have.text', 'Not a member?Sign up');\n// Login form\ncy.get('input[name=\"Email\"]').should('exist').and('have.attr', 'type', 'email')\n    .parent().parent(\".input.log-in\").should('exist').and('have.text', 'Email');\ncy.get('input[name=\"Password\"]').should('exist').and('have.attr', 'type', 'password')\n    .parent().parent(\".input.log-in\").should('exist').and('have.text', 'Password');\n// Form button wrapper\ncy.contains('Forgot password?').should('exist');\ncy.get(\".btn-text-wrapper\").parent('button[type=\\'submit\\']').should('have.text', 'Login')\n    .and('have.length', 1).and('be.visible');\ncy.get(\".main-logo\").should('be.visible');\ncy.get(\".section.footer\").scrollIntoView().should('be.visible');\ncy.get(\".footer-logo\").should('be.visible');\ncy.get(\".link-wrapper.first\").then(function ($col) {\n    cy.wrap($col).children(\"a:nth-child(2)\").should('have.text', 'Linkedin').and('be.visible').and('have.attr', 'href', Urls.linkedIn);\n    cy.wrap($col).children(\"a:nth-child(3)\").should('have.text', 'Facebook').and('be.visible').and('have.attr', 'href', Urls.facebook);\n    cy.wrap($col).children(\"a:nth-child(4)\").should('have.text', 'Instagram').and('be.visible').and('have.attr', 'href', Urls.instagram);\n    cy.wrap($col).children(\"a:nth-child(5)\").should('have.text', 'Telegram').and('be.visible').and('have.attr', 'href', Urls.telegram);\n});\ncy.get(\".link-wrapper.second\").then(function ($col) {\n    cy.wrap($col).children(\"a:nth-child(2)\").should('have.text', 'Contact').and('be.visible');\n    cy.wrap($col).children(\"a:nth-child(3)\").should('have.text', 'Terms & Conditions').and('be.visible');\n    cy.wrap($col).children(\"a:nth-child(4)\").should('have.text', 'Privacy Policy').and('be.visible');\n    cy.wrap($col).children(\"a:nth-child(5)\").should('have.text', 'Help Desk').and('be.visible');\n});\ncy.get(\"#zsiq_agtpic\").should('be.visible');",
+              "err": {},
+              "uuid": "fc7a0cce-c280-405b-85b2-50cd6ad22521",
+              "parentUUID": "93ab9916-ebd5-4dc2-9f1d-5b396a6876da",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is able to log in to the platform with existing user data",
+              "fullTitle": "Log in page A user is able to log in to the platform with existing user data",
+              "timedOut": null,
+              "duration": 3002,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Login form\ncy.get('input[name=\"Email\"]').type(Data.adminUser.Email);\ncy.get('input[name=\"Password\"]').type(Data.adminUser.Password);\ncy.get(\".btn-text-wrapper\").parent('button[type=\\'submit\\']')\n    .should('have.text', 'Login').realClick();\ncy.url().should('eq', Urls.requestsPage);",
+              "err": {},
+              "uuid": "2a8957ab-7d35-448f-a2c6-2c1c1735900a",
+              "parentUUID": "93ab9916-ebd5-4dc2-9f1d-5b396a6876da",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fc7a0cce-c280-405b-85b2-50cd6ad22521",
+            "2a8957ab-7d35-448f-a2c6-2c1c1735900a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16565,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

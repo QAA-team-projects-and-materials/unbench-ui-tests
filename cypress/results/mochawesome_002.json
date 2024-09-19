@@ -1,0 +1,562 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 21,
+    "passes": 2,
+    "pending": 0,
+    "failures": 19,
+    "start": "2023-09-05T10:26:39.721Z",
+    "end": "2023-09-05T10:37:29.205Z",
+    "duration": 649484,
+    "testsRegistered": 21,
+    "passPercent": 9.523809523809524,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5d58fa68-7777-4139-8dd0-ab57babe6de4",
+      "title": "",
+      "fullFile": "cypress/e2e/sign_up_page.cy.js",
+      "file": "cypress/e2e/sign_up_page.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+          "title": "Sign_up_page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify elements on the first step",
+              "fullTitle": "Sign_up_page Verify elements on the first step",
+              "timedOut": null,
+              "duration": 45429,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Locators.signUpPage.firstNameBlock).then(block => {\n  cy.wrap(block).children('div').should('be.visible').and('have.text', 'First name');\n  cy.wrap(block).children('input').should('be.visible');\n});\ncy.get(Locators.signUpPage.lastNameBlock).then(block => {\n  cy.wrap(block).children('div').should('be.visible').and('have.text', 'Last name');\n  cy.wrap(block).children('input').should('be.visible');\n});\ncy.get(Locators.signUpPage.email).then(block => {\n  cy.wrap(block).children('div').should('be.visible').and('have.text', 'Email');\n  cy.wrap(block).children('input').should('be.visible');\n});\ncy.get(Locators.signUpPage.password).then(block => {\n  cy.wrap(block).children('div').should('be.visible').and('have.text', 'Password');\n  cy.wrap(block).children('input').should('be.visible');\n});\ncy.get(Locators.signUpPage.position).then(block => {\n  cy.wrap(block).children('div').should('be.visible').and('have.text', 'Position');\n  cy.wrap(block).children('input').should('be.visible');\n});\ncy.get(Locators.signUpPage.dateOfBirth).then(block => {\n  cy.wrap(block).children('div').should('be.visible').and('have.text', 'Date of Birth (option)');\n  cy.wrap(block).children('input').should('be.visible');\n});\ncy.get(Locators.signUpPage.nextStepButton1).should('have.text', 'Next step (2/3)').and('be.visible');\ncy.get(Locators.signUpPage.logInLink).should(\"be.visible\").and('have.text', 'Log in');\ncy.get(Locators.signUpPage.logo).should('be.visible');\ncy.get(Locators.footer.footerBlock).scrollIntoView().should('be.visible');\ncy.get(Locators.footer.footerLogo).should('be.visible');\ncy.get(Locators.footer.firstColumnLinks).then($col => {\n  cy.wrap($col).children(Locators.footer.linkedInLink).should('have.text', 'Linkedin').and('be.visible').and('have.attr', 'href', Urls.linkedIn);\n  cy.wrap($col).children(Locators.footer.facebookLink).should('have.text', 'Facebook').and('be.visible').and('have.attr', 'href', Urls.facebook);\n  cy.wrap($col).children(Locators.footer.instagramLink).should('have.text', 'Instagram').and('be.visible').and('have.attr', 'href', Urls.instagram);\n  cy.wrap($col).children(Locators.footer.telegramLink).should('have.text', 'Telegram').and('be.visible').and('have.attr', 'href', Urls.telegram);\n});\ncy.get(Locators.footer.secondColumnLinks).then($col => {\n  cy.wrap($col).children(Locators.footer.contactLink).should('have.text', 'Contact').and('be.visible');\n  cy.wrap($col).children(Locators.footer.termsAndConditions).should('have.text', 'Terms & Conditions').and('be.visible');\n  cy.wrap($col).children(Locators.footer.privacyPolicy).should('have.text', 'Privacy Policy').and('be.visible');\n  cy.wrap($col).children(Locators.footer.helpdesk).should('have.text', 'Help Desk').and('be.visible');\n});\ncy.get(Locators.signUpPage.chatIcon).should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>\n    at ./cypress/e2e/sign_up_page.cy.js/</ (webpack:///./cypress/e2e/sign_up_page.cy.js:13:45)\n    at getRet (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135693:20)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6188:29)\n    at thenFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135704:60)\n    at then (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135953:21)\n    at wrapped (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151182:19)\n    at ../driver/src/cypress/command_queue.ts/runCommand (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:150008:15)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6943:10)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3625:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "137fedd2-516f-479d-89ce-806fac49bc5c",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify elements on the second step",
+              "fullTitle": "Sign_up_page Verify elements on the second step",
+              "timedOut": null,
+              "duration": 40805,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.navigateToTheSecondStep();\ncy.get(Locators.signUpPage.companyNameBlock).then(block => {\n  cy.wrap(block).children('div').should('have.text', 'Company name');\n  cy.wrap(block).children('input').should('be.visible');\n});\ncy.get(Locators.signUpPage.websiteBlock).then(block => {\n  cy.wrap(block).children('div').should('have.text', 'Website');\n  cy.wrap(block).children('input').should('be.visible');\n});\ncy.get(Locators.signUpPage.billingEmailBlock).then(block => {\n  cy.wrap(block).children('div').should('have.text', 'Billing Email');\n  cy.wrap(block).children('input').should('be.visible');\n});\ncy.get(Locators.signUpPage.headquartersBlock).then(block => {\n  cy.wrap(block).children('div').should('have.text', 'Headquarters');\n  cy.wrap(block).children('input').should('be.visible');\n});\ncy.get(Locators.signUpPage.keyTechnologiesBlock).then(block => {\n  cy.wrap(block).children('div:nth-child(1)').should('have.text', 'Key Technologies');\n  cy.wrap(block).children('div:nth-child(2)').should('be.visible');\n  cy.wrap(block).children('div:nth-child(3)').should('be.visible').children('div:nth-child(1)').should('have.text', 'Show more');\n});\ncy.get(Locators.signUpPage.industriesBlock).then(block => {\n  cy.wrap(block).children('div:nth-child(1)').scrollIntoView().should('have.text', 'Industries');\n  cy.wrap(block).children('div:nth-child(2)').should('be.visible');\n  cy.wrap(block).children('div:nth-child(3)').should('be.visible').children('div:nth-child(1)').should('have.text', 'Show more');\n});\ncy.get(Locators.signUpPage.backButton).should('be.visible').and('have.text', 'Back');\ncy.get(Locators.signUpPage.nextStepButton2).should('be.visible').and('have.text', 'Next step (3/3)');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>\n    at ./cypress/support/e2e.js/ (webpack:///./cypress/support/e2e.js:91:23)\n    at getRet (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135693:20)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6188:29)\n    at thenFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135704:60)\n    at then (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135953:21)\n    at wrapped (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151182:19)\n    at ../driver/src/cypress/command_queue.ts/runCommand (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:150008:15)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6943:10)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3625:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "2016122b-0a0a-4c4d-ba94-e2b49a741cff",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify elements on the third step",
+              "fullTitle": "Sign_up_page Verify elements on the third step",
+              "timedOut": null,
+              "duration": 40672,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.navigateToTheSecondStep();\ncy.navigateToTheThirdStep();\ncy.get(Locators.signUpPage.skype).then(block => {\n  cy.wrap(block).children('div').should(\"be.visible\").and('have.text', 'Skype (optional)');\n  cy.wrap(block).children('input').should(\"be.visible\");\n});\ncy.get(Locators.signUpPage.telegramBlock).then(block => {\n  cy.wrap(block).children('div').should(\"be.visible\").and('have.text', 'Telegram (optional)');\n  cy.wrap(block).children('input').should(\"be.visible\");\n});\ncy.get(Locators.signUpPage.linkedInBlock).then(block => {\n  cy.wrap(block).children('div').should(\"be.visible\").and('have.text', 'Linkedin (optional)');\n  cy.wrap(block).children('input').should(\"be.visible\");\n});\ncy.get(Locators.signUpPage.termsAndConditions).should('have.text', 'Terms & Conditions').and('be.visible');\ncy.get(Locators.signUpPage.backButton).should('be.visible').and('have.text', 'Back');\ncy.get(Locators.signUpPage.createAccountButton).should('be.visible').and('have.text', 'Create account');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>\n    at ./cypress/support/e2e.js/ (webpack:///./cypress/support/e2e.js:91:23)\n    at getRet (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135693:20)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6188:29)\n    at thenFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135704:60)\n    at then (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135953:21)\n    at wrapped (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151182:19)\n    at ../driver/src/cypress/command_queue.ts/runCommand (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:150008:15)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6943:10)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3625:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "c9dedcfa-321a-4066-8aaa-76236bb23819",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is able to sign up on the platform",
+              "fullTitle": "Sign_up_page A user is able to sign up on the platform",
+              "timedOut": null,
+              "duration": 40889,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Locators.signUpPage.firstNameBlock).children('input').type(Data.createCompany.admin.Firstname);\ncy.get(Locators.signUpPage.lastNameBlock).children('input').type(Data.createCompany.admin.Lastname);\ncy.get(Locators.signUpPage.email).children('input').type(Data.createCompany.admin.Email);\ncy.get(Locators.signUpPage.password).children('input').type(Data.createCompany.admin.Password);\ncy.get(Locators.signUpPage.position).children('input').type(Data.createCompany.admin.Position);\ncy.get(Locators.signUpPage.date).then(block => {\n  block[0].setAttribute('value', Data.date);\n});\ncy.get(Locators.signUpPage.nextStepButton1).click();\ncy.wait(5000);\ncy.get(Locators.signUpPage.companyNameBlock).children('input').type(Data.createCompany.company.Company);\ncy.get(Locators.signUpPage.websiteBlock).children('input').type(Data.createCompany.company.Website);\ncy.get(Locators.signUpPage.billingEmailBlock).children('input').type(Data.createCompany.company.BillingEmail);\ncy.get(Locators.signUpPage.headquartersBlock).children('input').type(Data.createCompany.company.Headquarters);\ncy.get(Locators.signUpPage.keyTechnologiesBlock).children('div:nth-child(2)').then(block => {\n  cy.wrap(block).children('div:nth-child(1)').click().should('have.class', Locators.signUpPage.activeItemClass);\n  cy.wrap(block).children('div:nth-child(2)').click().should('have.class', Locators.signUpPage.activeItemClass);\n});\ncy.get(Locators.signUpPage.industriesBlock).children('div:nth-child(2)').then(block => {\n  cy.wrap(block).children('div:nth-child(1)').click().should('have.class', Locators.signUpPage.activeItemClass);\n  cy.wrap(block).children('div:nth-child(2)').click().should('have.class', Locators.signUpPage.activeItemClass);\n});\ncy.get(Locators.signUpPage.nextStepButton2).click();\ncy.wait(5000);\ncy.get(Locators.signUpPage.createAccountButton).click();\ncy.url().should('eq', Urls.loginPage);\ncy.get(Locators.loginPage.successRegistration).should('be.visible').and('have.text', Data.successRegistration);\ncy.wait(5000);\ncy.retryFetchingEmail().then(() => {\n  cy.get(Locators.signUpPage.welcomeMail.title).should('have.text', `Hi ${Data.createCompany.company.Company}!`);\n  cy.get(Locators.signUpPage.welcomeMail.welcomeText).children('a').then(el => {\n    cy.visit(el[0].getAttribute('href'));\n  });\n});\ncy.on(\"window:before:load\", newUrl => {\n  expect(newUrl).to.contain(Urls.landingPage);\n});\ncy.deleteCompany();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > cy.get(#email-form>div:nth-child(1)>div:nth-child(1))",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > cy.get(#email-form>div:nth-child(1)>div:nth-child(1))\n    at ./cypress/e2e/sign_up_page.cy.js/ (webpack:///./cypress/e2e/sign_up_page.cy.js:113:51)\n    at ../driver/src/cypress/cy.ts/setRunnable/runnable.fn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151423:43)\n    at callFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:104964:21)\n    at ../driver/src/cypress/runner.ts/create/onRunnableRun (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:158412:30)\n    at finallyHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:5468:23)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6951:10)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:7031:18)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3621:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "3feec5e6-ee90-4a20-bafb-d6498ec2aa03",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is not able to sign up on the platform providing an invalid email field",
+              "fullTitle": "Sign_up_page A user is not able to sign up on the platform providing an invalid email field",
+              "timedOut": null,
+              "duration": 40640,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Locators.signUpPage.firstNameBlock).children('input').type(Data.createCompany.admin.Firstname);\ncy.get(Locators.signUpPage.lastNameBlock).children('input').type(Data.createCompany.admin.Lastname);\ncy.get(Locators.signUpPage.email).children('input').type(Data.invalidEmail1);\ncy.get(Locators.signUpPage.password).children('input').type(Data.createCompany.admin.Password);\ncy.get(Locators.signUpPage.position).children('input').type(Data.createCompany.admin.Position);\ncy.get(Locators.signUpPage.nextStepButton1).click();\ncy.get(Locators.signUpPage.email).children('p.form-error').should('be.visible').and('have.text', 'Type email@domain.com');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > cy.get(#email-form>div:nth-child(1)>div:nth-child(1))",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > cy.get(#email-form>div:nth-child(1)>div:nth-child(1))\n    at ./cypress/e2e/sign_up_page.cy.js/ (webpack:///./cypress/e2e/sign_up_page.cy.js:157:51)\n    at ../driver/src/cypress/cy.ts/setRunnable/runnable.fn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151423:43)\n    at callFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:104964:21)\n    at ../driver/src/cypress/runner.ts/create/onRunnableRun (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:158412:30)\n    at finallyHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:5468:23)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6951:10)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:7031:18)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3621:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "0c64b7b2-c27c-4900-b59e-25c49de53819",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is not able to sign up on the platform providing an existing email field",
+              "fullTitle": "Sign_up_page A user is not able to sign up on the platform providing an existing email field",
+              "timedOut": null,
+              "duration": 40678,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.createCompany();\ncy.get(Locators.signUpPage.firstNameBlock).children('input').type(Data.createCompany.admin.Firstname);\ncy.get(Locators.signUpPage.lastNameBlock).children('input').type(Data.createCompany.admin.Lastname);\ncy.get(Locators.signUpPage.email).children('input').type(Data.createCompany.admin.Email);\ncy.get(Locators.signUpPage.password).children('input').type(Data.createCompany.admin.Password);\ncy.get(Locators.signUpPage.position).children('input').type(Data.createCompany.admin.Position);\ncy.get(Locators.signUpPage.nextStepButton1).click();\ncy.get(Locators.signUpPage.email).children('p.form-error').should('be.visible').and('have.text', 'Sorry, Email is already taken');\ncy.deleteCompany();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > cy.get(#email-form>div:nth-child(1)>div:nth-child(1))",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > cy.get(#email-form>div:nth-child(1)>div:nth-child(1))\n    at ./cypress/e2e/sign_up_page.cy.js/ (webpack:///./cypress/e2e/sign_up_page.cy.js:168:51)\n    at ../driver/src/cypress/cy.ts/setRunnable/runnable.fn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151423:43)\n    at callFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:104964:21)\n    at ../driver/src/cypress/runner.ts/create/onRunnableRun (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:158412:30)\n    at finallyHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:5468:23)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6951:10)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:7031:18)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3621:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "9f671b38-c5a3-4441-bfe7-2c5ee9c688d2",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is not able to sign up on the platform providing a password field that contains less than 8 symbols",
+              "fullTitle": "Sign_up_page A user is not able to sign up on the platform providing a password field that contains less than 8 symbols",
+              "timedOut": null,
+              "duration": 40607,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Locators.signUpPage.firstNameBlock).children('input').type(Data.createCompany.admin.Firstname);\ncy.get(Locators.signUpPage.lastNameBlock).children('input').type(Data.createCompany.admin.Lastname);\ncy.get(Locators.signUpPage.email).children('input').type(Data.createCompany.admin.Email);\ncy.get(Locators.signUpPage.password).children('input').type(Data.invalidPass);\ncy.get(Locators.signUpPage.position).children('input').type(Data.createCompany.admin.Position);\ncy.get(Locators.signUpPage.nextStepButton1).click();\ncy.get(Locators.signUpPage.password).children('p.form-error').should('be.visible').and('have.text', 'Should contain at least 8 symbols');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > cy.get(#email-form>div:nth-child(1)>div:nth-child(1))",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > cy.get(#email-form>div:nth-child(1)>div:nth-child(1))\n    at ./cypress/e2e/sign_up_page.cy.js/ (webpack:///./cypress/e2e/sign_up_page.cy.js:179:51)\n    at ../driver/src/cypress/cy.ts/setRunnable/runnable.fn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151423:43)\n    at callFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:104964:21)\n    at ../driver/src/cypress/runner.ts/create/onRunnableRun (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:158412:30)\n    at finallyHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:5468:23)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6951:10)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:7031:18)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3621:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "1dfd0838-50aa-484a-a614-0468a8d7c4ea",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is not able to sign up on the platform without providing required fields on the first step",
+              "fullTitle": "Sign_up_page A user is not able to sign up on the platform without providing required fields on the first step",
+              "timedOut": null,
+              "duration": 40827,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Locators.signUpPage.nextStepButton1).click();\ncy.on('uncaught:exception', () => {\n  return false;\n});\ncy.get(Locators.signUpPage.firstNameBlock).scrollIntoView().children('p.form-error').should('be.visible').and('have.text', 'Fill in the Firstname field');\ncy.get(Locators.signUpPage.lastNameBlock).children('p.form-error').should('be.visible').and('have.text', 'Fill in the Lastname field');\ncy.get(Locators.signUpPage.email).children('p.form-error').should('be.visible').and('have.text', 'Fill in the Email field');\ncy.get(Locators.signUpPage.password).children('p.form-error').should('be.visible').and('have.text', 'Fill in the Password field');\ncy.get(Locators.signUpPage.position).children('p.form-error').should('be.visible').and('have.text', 'Fill in the Position field');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `p.form-error`, but never found it. Queried from:\n\n              > <div.input.log-in>",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `p.form-error`, but never found it. Queried from:\n\n              > <div.input.log-in>\n    at ./cypress/e2e/sign_up_page.cy.js/ (webpack:///./cypress/e2e/sign_up_page.cy.js:191:93)\n    at ../driver/src/cypress/cy.ts/setRunnable/runnable.fn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151423:43)\n    at callFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:104964:21)\n    at ../driver/src/cypress/runner.ts/create/onRunnableRun (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:158412:30)\n    at finallyHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:5468:23)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6951:10)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:7031:18)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3621:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "c267a94d-a6dd-4d42-97f3-efdcb64e98e8",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is not able to sign up on the platform without providing required fields on the second step",
+              "fullTitle": "Sign_up_page A user is not able to sign up on the platform without providing required fields on the second step",
+              "timedOut": null,
+              "duration": 41048,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.navigateToTheSecondStep();\ncy.get(Locators.signUpPage.nextStepButton2).click();\ncy.get(Locators.signUpPage.companyNameBlock).children('p.form-error').should('be.visible').and('have.text', 'Fill in the Company field');\ncy.get(Locators.signUpPage.websiteBlock).children('p.form-error').should('be.visible').and('have.text', 'Fill in the Website field');\ncy.get(Locators.signUpPage.billingEmailBlock).children('p.form-error').should('be.visible').and('have.text', 'Fill in the BillingEmail field');\ncy.get(Locators.signUpPage.headquartersBlock).children('p.form-error').should('be.visible').and('have.text', 'Fill in the Headquarters field');\ncy.get(Locators.signUpPage.keyTechnologiesBlock).children('div:nth-child(1)').should('have.attr', 'style', 'color: rgb(248, 95, 48);');\ncy.get(Locators.signUpPage.industriesBlock).children('div:nth-child(1)').should('have.attr', 'style', 'color: rgb(248, 95, 48);');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>\n    at ./cypress/support/e2e.js/ (webpack:///./cypress/support/e2e.js:91:23)\n    at getRet (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135693:20)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6188:29)\n    at thenFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135704:60)\n    at then (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135953:21)\n    at wrapped (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151182:19)\n    at ../driver/src/cypress/command_queue.ts/runCommand (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:150008:15)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6943:10)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3625:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "d67676aa-a6ef-4fba-a609-3ac560b5bbf8",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is able to open a chat via the chat icon",
+              "fullTitle": "Sign_up_page A user is able to open a chat via the chat icon",
+              "timedOut": null,
+              "duration": 1326,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Locators.signUpPage.chatIcon).click();\ncy.get(Locators.signUpPage.chatModal).should('be.visible');",
+              "err": {},
+              "uuid": "6977cb41-12a4-4d4a-a5fe-f55af657ed79",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigate to the unbench.us via the \"UNBENCH\" logo",
+              "fullTitle": "Sign_up_page Navigate to the unbench.us via the \"UNBENCH\" logo",
+              "timedOut": null,
+              "duration": 60619,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Locators.signUpPage.logo).click();\ncy.on(\"url:changed\", newUrl => {\n  expect(newUrl).to.eq(Urls.landingPage);\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\nat timedOutWaitingForPageLoad (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:137295:72)\nat ../driver/src/cy/commands/navigation.ts/stabilityChanged (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:137593:16)\nat tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\nat ../../node_modules/bluebird/js/release/catch_filter.js/module.exports/catchFilter (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:4036:41)\nat tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\nat ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\nat ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\nat ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6951:10)\nat ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:7027:18)\nat _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3621:12)\nat _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\nat ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\nat ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "048d69e0-2ec0-4ce7-9b90-4ba7b154eda3",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigate to the log in page via the \"LOG IN\" link",
+              "fullTitle": "Sign_up_page Navigate to the log in page via the \"LOG IN\" link",
+              "timedOut": null,
+              "duration": 1313,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Locators.signUpPage.logInLink).click();\ncy.url().should('eq', Urls.loginPage);",
+              "err": {},
+              "uuid": "b81caa8f-3687-46e6-adc0-a0bf6f6a2abe",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is able to extend the key technologies list",
+              "fullTitle": "Sign_up_page A user is able to extend the key technologies list",
+              "timedOut": null,
+              "duration": 40574,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.navigateToTheSecondStep();\ncy.get(Locators.signUpPage.keyTechnologiesBlock).children('div:nth-child(3)').click().children('div:nth-child(2)').should('have.text', 'Show less');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>\n    at ./cypress/support/e2e.js/ (webpack:///./cypress/support/e2e.js:91:23)\n    at getRet (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135693:20)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6188:29)\n    at thenFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135704:60)\n    at then (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135953:21)\n    at wrapped (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151182:19)\n    at ../driver/src/cypress/command_queue.ts/runCommand (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:150008:15)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6943:10)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3625:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "451a82f6-4a6b-40ef-805c-cea72c3c001a",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is able to extend the industries list",
+              "fullTitle": "Sign_up_page A user is able to extend the industries list",
+              "timedOut": null,
+              "duration": 40640,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.navigateToTheSecondStep();\ncy.get(Locators.signUpPage.industriesBlock).children('div:nth-child(3)').click().children('div:nth-child(2)').should('have.text', 'Show less');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>\n    at ./cypress/support/e2e.js/ (webpack:///./cypress/support/e2e.js:91:23)\n    at getRet (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135693:20)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6188:29)\n    at thenFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135704:60)\n    at then (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135953:21)\n    at wrapped (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151182:19)\n    at ../driver/src/cypress/command_queue.ts/runCommand (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:150008:15)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6943:10)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3625:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "346c1835-e931-49c4-8bff-4b2a3e2e2696",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is able to get back to the first step via the \"Back\" button",
+              "fullTitle": "Sign_up_page A user is able to get back to the first step via the \"Back\" button",
+              "timedOut": null,
+              "duration": 40620,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.navigateToTheSecondStep();\ncy.get(Locators.signUpPage.backButton).click();\ncy.get(Locators.signUpPage.firstNameBlock).children('div:nth-child(1)').should('be.visible').and('have.text', 'First name');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>\n    at ./cypress/support/e2e.js/ (webpack:///./cypress/support/e2e.js:91:23)\n    at getRet (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135693:20)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6188:29)\n    at thenFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135704:60)\n    at then (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135953:21)\n    at wrapped (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151182:19)\n    at ../driver/src/cypress/command_queue.ts/runCommand (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:150008:15)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6943:10)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3625:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "9c1dc3b3-a224-4d31-a5d9-7d1900810bbb",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is able to get back to the second step via the \"Back\" button",
+              "fullTitle": "Sign_up_page A user is able to get back to the second step via the \"Back\" button",
+              "timedOut": null,
+              "duration": 40709,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.navigateToTheSecondStep();\ncy.navigateToTheThirdStep();\ncy.get(Locators.signUpPage.backButton).click();\ncy.get(Locators.signUpPage.companyNameBlock).children('div:nth-child(1)').should('be.visible').and('have.text', 'Company name');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>\n    at ./cypress/support/e2e.js/ (webpack:///./cypress/support/e2e.js:91:23)\n    at getRet (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135693:20)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6188:29)\n    at thenFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135704:60)\n    at then (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135953:21)\n    at wrapped (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151182:19)\n    at ../driver/src/cypress/command_queue.ts/runCommand (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:150008:15)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6943:10)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3625:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "87bf1295-0f3d-43bd-a93c-9069940700ee",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A user is able to navigate to the \"Terms&Conditions\" page via the form link",
+              "fullTitle": "Sign_up_page A user is able to navigate to the \"Terms&Conditions\" page via the form link",
+              "timedOut": null,
+              "duration": 40621,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.navigateToTheSecondStep();\ncy.navigateToTheThirdStep();\ncy.get(Locators.signUpPage.termsAndConditions).then(el => {\n  cy.visit(el[0].getAttribute('href'));\n});\ncy.on(\"window:before:load\", newUrl => {\n  expect(newUrl).to.contain(Urls.termsAndConditions);\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>",
+                "estack": "AssertionError: Timed out retrying after 40000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > <div.input.log-in>\n    at ./cypress/support/e2e.js/ (webpack:///./cypress/support/e2e.js:91:23)\n    at getRet (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135693:20)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6188:29)\n    at thenFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135704:60)\n    at then (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135953:21)\n    at wrapped (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151182:19)\n    at ../driver/src/cypress/command_queue.ts/runCommand (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:150008:15)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6943:10)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3625:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "61ee0d1e-0198-4b0d-96f7-5d984858ea62",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigate to the Contact page",
+              "fullTitle": "Sign_up_page Navigate to the Contact page",
+              "timedOut": null,
+              "duration": 4632,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Locators.footer.secondColumnLinks).children(Locators.footer.contactLink).then(el => {\n  cy.visit(el[0].getAttribute('href'));\n});\ncy.on(\"window:before:load\", newUrl => {\n  expect(newUrl).to.contain(Urls.contact);\n});",
+              "err": {
+                "message": "Error: The following error originated from your application code, not from Cypress.\n\n  > JSON.parse: unexpected character at line 1 column 1 of the JSON data\n\nThis error was thrown by a cross origin page. If you wish to suppress this error you will have to use the cy.origin command to handle the error prior to visiting the page.\n\n`cy.origin('https://unbench.us', () => {`\n`  cy.on('uncaught:exception', (e) => {`\n`    if (e.message.includes('Things went bad')) {`\n`      // we expected this error, so let's ignore it`\n`      // and let the test continue`\n`      return false`\n`    }`\n`  })`\n`})`\n`cy.visit('https://unbench.us/contact-us.html')`\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nhttps://on.cypress.io/origin",
+                "estack": "Error: The following error originated from your application code, not from Cypress.\n\n  > JSON.parse: unexpected character at line 1 column 1 of the JSON data\n\nThis error was thrown by a cross origin page. If you wish to suppress this error you will have to use the cy.origin command to handle the error prior to visiting the page.\n\n`cy.origin('https://unbench.us', () => {`\n`  cy.on('uncaught:exception', (e) => {`\n`    if (e.message.includes('Things went bad')) {`\n`      // we expected this error, so let's ignore it`\n`      // and let the test continue`\n`      return false`\n`    }`\n`  })`\n`})`\n`cy.visit('https://unbench.us/contact-us.html')`\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nhttps://on.cypress.io/origin\nat cypressErr (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:154824:18)\nat errByPath (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:154879:10)\nat ../driver/src/cypress/aut_event_handlers.ts/setupAutEventHandlers (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:149221:80)\nat emit (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:18373:17)\nat onMessage (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:129783:12)\nat crossOriginOnMessageRef (https://test.kitrum.dev/__/assets/index-8b881eb1.js:112929:72)",
+                "diff": null
+              },
+              "uuid": "2ae63c4c-e31f-445f-828b-70ed467a522d",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigate to the Terms&Conditions page",
+              "fullTitle": "Sign_up_page Navigate to the Terms&Conditions page",
+              "timedOut": null,
+              "duration": 3054,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Locators.footer.secondColumnLinks).children(Locators.footer.termsAndConditions).then(el => {\n  cy.visit(el[0].getAttribute('href'));\n});\ncy.on(\"window:before:load\", newUrl => {\n  expect(newUrl).to.contain(Urls.termsAndConditions);\n});",
+              "err": {
+                "message": "Error: The following error originated from your application code, not from Cypress.\n\n  > JSON.parse: unexpected character at line 1 column 1 of the JSON data\n\nThis error was thrown by a cross origin page. If you wish to suppress this error you will have to use the cy.origin command to handle the error prior to visiting the page.\n\n`cy.origin('https://unbench.us', () => {`\n`  cy.on('uncaught:exception', (e) => {`\n`    if (e.message.includes('Things went bad')) {`\n`      // we expected this error, so let's ignore it`\n`      // and let the test continue`\n`      return false`\n`    }`\n`  })`\n`})`\n`cy.visit('https://unbench.us/terms-and-conditions.html')`\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nhttps://on.cypress.io/origin",
+                "estack": "Error: The following error originated from your application code, not from Cypress.\n\n  > JSON.parse: unexpected character at line 1 column 1 of the JSON data\n\nThis error was thrown by a cross origin page. If you wish to suppress this error you will have to use the cy.origin command to handle the error prior to visiting the page.\n\n`cy.origin('https://unbench.us', () => {`\n`  cy.on('uncaught:exception', (e) => {`\n`    if (e.message.includes('Things went bad')) {`\n`      // we expected this error, so let's ignore it`\n`      // and let the test continue`\n`      return false`\n`    }`\n`  })`\n`})`\n`cy.visit('https://unbench.us/terms-and-conditions.html')`\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nhttps://on.cypress.io/origin\nat cypressErr (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:154824:18)\nat errByPath (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:154879:10)\nat ../driver/src/cypress/aut_event_handlers.ts/setupAutEventHandlers (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:149221:80)\nat emit (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:18373:17)\nat onMessage (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:129783:12)\nat crossOriginOnMessageRef (https://test.kitrum.dev/__/assets/index-8b881eb1.js:112929:72)",
+                "diff": null
+              },
+              "uuid": "3b870b6d-a607-4203-97d1-89721c4aff36",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigate to the Privacy Policy page",
+              "fullTitle": "Sign_up_page Navigate to the Privacy Policy page",
+              "timedOut": null,
+              "duration": 2372,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Locators.footer.secondColumnLinks).children(Locators.footer.privacyPolicy).then(el => {\n  cy.visit(el[0].getAttribute('href'));\n});\ncy.on(\"window:before:load\", newUrl => {\n  expect(newUrl).to.contain(Urls.privacyPolicy);\n});",
+              "err": {
+                "message": "Error: The following error originated from your application code, not from Cypress.\n\n  > JSON.parse: unexpected character at line 1 column 1 of the JSON data\n\nThis error was thrown by a cross origin page. If you wish to suppress this error you will have to use the cy.origin command to handle the error prior to visiting the page.\n\n`cy.origin('https://unbench.us', () => {`\n`  cy.on('uncaught:exception', (e) => {`\n`    if (e.message.includes('Things went bad')) {`\n`      // we expected this error, so let's ignore it`\n`      // and let the test continue`\n`      return false`\n`    }`\n`  })`\n`})`\n`cy.visit('https://unbench.us/privacy-policy.html')`\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nhttps://on.cypress.io/origin",
+                "estack": "Error: The following error originated from your application code, not from Cypress.\n\n  > JSON.parse: unexpected character at line 1 column 1 of the JSON data\n\nThis error was thrown by a cross origin page. If you wish to suppress this error you will have to use the cy.origin command to handle the error prior to visiting the page.\n\n`cy.origin('https://unbench.us', () => {`\n`  cy.on('uncaught:exception', (e) => {`\n`    if (e.message.includes('Things went bad')) {`\n`      // we expected this error, so let's ignore it`\n`      // and let the test continue`\n`      return false`\n`    }`\n`  })`\n`})`\n`cy.visit('https://unbench.us/privacy-policy.html')`\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nhttps://on.cypress.io/origin\nat cypressErr (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:154824:18)\nat errByPath (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:154879:10)\nat ../driver/src/cypress/aut_event_handlers.ts/setupAutEventHandlers (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:149221:80)\nat emit (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:18373:17)\nat onMessage (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:129783:12)\nat crossOriginOnMessageRef (https://test.kitrum.dev/__/assets/index-8b881eb1.js:112929:72)",
+                "diff": null
+              },
+              "uuid": "7741aa4d-a669-4fb2-8a66-c0c9735ec850",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigate to the Help Desk page ",
+              "fullTitle": "Sign_up_page Navigate to the Help Desk page ",
+              "timedOut": null,
+              "duration": 859,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Locators.footer.secondColumnLinks).children(Locators.footer.helpdesk).then(el => {\n  cy.visit(el[0].getAttribute('href'));\n});\ncy.on(\"window:before:load\", newUrl => {\n  expect(newUrl).to.contain(Urls.helpDesk);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://unbench.us/help-desk.html\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://unbench.us/help-desk.html\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\nat ../driver/src/cy/commands/navigation.ts/__webpack_exports__.default/visit/visit/ (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:138236:84)\nat visitFailedByErr (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:137644:12)\nat ../driver/src/cy/commands/navigation.ts/__webpack_exports__.default/visit/visit (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:138219:29)\nat tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\nat ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\nat ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\nat ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6951:10)\nat ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:7027:18)\nat _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3621:12)\nat _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\nat ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\nat ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)\nFrom Your Spec Code:\n    at ./cypress/e2e/sign_up_page.cy.js/</ (webpack:///./cypress/e2e/sign_up_page.cy.js:289:15)\n    at getRet (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135693:20)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6188:29)\n    at thenFn (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135704:60)\n    at then (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:135953:21)\n    at wrapped (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:151182:19)\n    at ../driver/src/cypress/command_queue.ts/runCommand (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:150008:15)\n    at tryCatcher (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:8914:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6849:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6906:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:6943:10)\n    at _drainQueueStep (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3625:12)\n    at _drainQueue (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3614:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3630:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://test.kitrum.dev/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "130a6128-83bd-464d-95ab-f2d4ebe1058b",
+              "parentUUID": "b9734f4b-ac64-4b39-891f-cec83de00f93",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6977cb41-12a4-4d4a-a5fe-f55af657ed79",
+            "b81caa8f-3687-46e6-adc0-a0bf6f6a2abe"
+          ],
+          "failures": [
+            "137fedd2-516f-479d-89ce-806fac49bc5c",
+            "2016122b-0a0a-4c4d-ba94-e2b49a741cff",
+            "c9dedcfa-321a-4066-8aaa-76236bb23819",
+            "3feec5e6-ee90-4a20-bafb-d6498ec2aa03",
+            "0c64b7b2-c27c-4900-b59e-25c49de53819",
+            "9f671b38-c5a3-4441-bfe7-2c5ee9c688d2",
+            "1dfd0838-50aa-484a-a614-0468a8d7c4ea",
+            "c267a94d-a6dd-4d42-97f3-efdcb64e98e8",
+            "d67676aa-a6ef-4fba-a609-3ac560b5bbf8",
+            "048d69e0-2ec0-4ce7-9b90-4ba7b154eda3",
+            "451a82f6-4a6b-40ef-805c-cea72c3c001a",
+            "346c1835-e931-49c4-8bff-4b2a3e2e2696",
+            "9c1dc3b3-a224-4d31-a5d9-7d1900810bbb",
+            "87bf1295-0f3d-43bd-a93c-9069940700ee",
+            "61ee0d1e-0198-4b0d-96f7-5d984858ea62",
+            "2ae63c4c-e31f-445f-828b-70ed467a522d",
+            "3b870b6d-a607-4203-97d1-89721c4aff36",
+            "7741aa4d-a669-4fb2-8a66-c0c9735ec850",
+            "130a6128-83bd-464d-95ab-f2d4ebe1058b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 648934,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
